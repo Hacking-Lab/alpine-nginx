@@ -8,8 +8,6 @@ services:
       - ./63bee851-fa73-4177-badd-ee74761f283e.env
     volumes:
       - ./63bee851-fa73-4177-badd-ee74761f283e.gn:/goldnugget/63bee851-fa73-4177-badd-ee74761f283e.gn
-      - ./flag-deploy-scripts:/flag-deploy-scripts
-      - ./htdocs:/usr/html
     ports:
       - 8000:80
 
