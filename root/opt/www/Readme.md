@@ -1,6 +1,6 @@
 # Alpine Linux NGINX Web Server
 ## Introduction
-This content ist provided by a `docker based` Alpine Linux nginx web server from the Hacking-Lab CTF system. 
+This content ist provided by a `docker service` based on Alpine Linux nginx web server from the Hacking-Lab CTF system. 
 
 ## Base Image
 * hackinglab/alpine-base

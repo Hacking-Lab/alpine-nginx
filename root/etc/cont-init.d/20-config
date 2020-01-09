@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bash
 
+source /etc/hluser
+
 # make our folders
 echo "================== make /config =========="
 mkdir -p \
@@ -13,14 +15,14 @@ mkdir -p \
 	echo "copy /defaults/nginx.conf to /config/nginx/nginx.conf"
 	cp /defaults/nginx.conf /config/nginx/nginx.conf
 	ls -al /config/nginx/
+        sed -i -e "s/HL_USER_USERNAME/$HL_USER_USERNAME/g" /config/nginx/nginx.conf
 [[ ! -f /config/nginx/site-confs/default ]] && \
 	echo "copy /defaults/default to /config/nginx/site-confs/default"
 	cp /defaults/default /config/nginx/site-confs/default
 	ls -al /config/nginx/site-confs/
+        sed -i -e "s/HL_USER_USERNAME/$HL_USER_USERNAME/g" /config/nginx/nginx.conf
 
-# permissions
-source /etc/hluser
-
+# permissions
 chown -R $HL_USER_USERNAME:$HL_USER_USERNAME \
 	/config \
 	/run \
