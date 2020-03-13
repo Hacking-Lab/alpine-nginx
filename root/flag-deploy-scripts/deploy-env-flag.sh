@@ -2,3 +2,7 @@
 
 echo "put your commands to deploy the env based flag here"
 echo "the variable \$GOLDNUGGET contains the dynamic flag"
+
+sed -i -e "s/SED_GOLDNUGGET/$GOLDNUGGET/g" /opt/www/Readme.md
+
+
