@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  nginx:
+    build: .
+    image: hackinglab/alpine-nginx:3.2
+    environment:
+    - AUTHOR=e1
+    - USERNAME=hracker
+    labels:
+      - "traefik.port=80"
+      - "traefik.frontend.rule=Host:ttyd.idocker.hacking-lab.com"
+      - "traefik.protocol=http"
+
+

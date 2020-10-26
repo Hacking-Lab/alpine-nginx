@@ -2,7 +2,7 @@
 
 source /etc/hluser
 
-# make our folders
+# make our folders
 echo "================== make /config =========="
 mkdir -p \
 	/config/{nginx/site-confs,www,log/nginx,keys,log/php} \
@@ -10,7 +10,7 @@ mkdir -p \
 	/var/lib/nginx/tmp/client_body \
 	/var/tmp/nginx
 
-# copy config files
+# copy config files
 [[ ! -f /config/nginx/nginx.conf ]] && \
 	echo "copy /defaults/nginx.conf to /config/nginx/nginx.conf"
 	cp /defaults/nginx.conf /config/nginx/nginx.conf
