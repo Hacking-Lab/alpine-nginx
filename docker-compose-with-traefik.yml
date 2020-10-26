@@ -9,7 +9,7 @@ services:
     - USERNAME=hracker
     labels:
       - "traefik.port=80"
-      - "traefik.frontend.rule=Host:ttyd.idocker.hacking-lab.com"
+      - "traefik.frontend.rule=Host:alpine-nginx.idocker.hacking-lab.com"
       - "traefik.protocol=http"
 
 
